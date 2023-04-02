@@ -14,8 +14,10 @@
       <span class="quote-icon quote-icon-start animate-slide-in-down">
         <i class="icon icon-quotes-left"></i>
       </span>
-      <p class="quote-content animate-slide-in-down">三十年河东，三十年河西，莫欺少年穷！</p>
-      <p class="quote-author animate-slide-in-down">《斗破苍穹》—— <em>天蚕土豆</em></p>
+      <p class="quote-content animate-slide-in-down">派大星：猜猜我有几颗糖？猜对了两颗都给你。</p>
+      <p class="quote-content animate-slide-in-down">海绵宝宝：五颗！</p>
+      <p class="quote-content animate-slide-in-down">派大星：猜对了！先给你两颗，剩下的下次给你。</p>
+      <p class="quote-author animate-slide-in-down">——《海绵宝宝》</p>
       <span class="quote-icon quote-icon-end animate-slide-in-up">
         <i class="icon icon-quotes-right"></i>
       </span>
@@ -33,9 +35,6 @@
       </span>
       <span class="location-text animate-slide-in-down">HengYang - China</span>
     </div>
-    <div class="relocating">
-      Navigating to: <span class="relocate-location"></span>...
-    </div>
   </div>
     <script src="static\plugins\jquery-3.3.1.min.js"></script>
     <script>
@@ -44,8 +43,7 @@
           var SLIDE_IN_UP = { opacity: 1, bottom: 0 };
           var SLIDE_IN_LEFT = { left: 0 };
           var SLIDE_IN_RIGHT = { right: 0 };
-    
-          registerCheatCode();
+          
           executeAnimations();
     
           function executeAnimations() {
@@ -98,22 +96,7 @@
             return $(selector).delay(delay)
               .animate(properties, options)
               .promise();
-          }
-    
-          function registerCheatCode() {
-            $(document.body).on('keydown', function (event) {
-              var KEY_B = 66;
-    
-              if (event.which === KEY_B) {
-                $('.relocate-location').text('Bookmark Page');
-                $('.relocating').css('opacity', 1);
-    
-                window.setTimeout(function () {
-                  window.location.href = '/bookmarks.html';
-                }, 1000);
-              }
-            });
-          }
+          } 
         });
       </script>
 </body>
